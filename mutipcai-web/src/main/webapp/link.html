@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta http-equiv="Content-Type" content="textml; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script src="js/se_in.js"></script>
+
+<style>
+	#menu #nav{  overflow-x:inherit;}
+	#menu #nav li{width:50%;}
+	.tag{background:#fff;}
+</style>
+
+</head>
+<body>
+<form>
+<div class="wrapper">
+ 		
+    <div class="head" style="z-index:9999999 !important;">
+    	<a href="AgencyCentre.html" class="pgv"></a>
+        <div>链接开户</div>
+        <a class="yup" href="register.html"></a>
+    </div>
+    
+   	<div class="whole">
+   	
+        <div class="link">
+        	<ul>
+            	<li>
+                	<em>推广域名</em>
+                    <input type="text" value="请设置推广域名"  id="Button1" onClick="showBg(1);">
+                </li>
+                <li>
+                	<em>用户类型</em>
+                    <input type="text" value="请设置用户类型" onClick="showBg(2);">
+                </li>
+                <li>
+                	<em>链接有效期</em>
+                    <input type="text" value="请设置链接有效期"  onClick="showBg(3);">
+                </li>
+                <li>
+                	<em>设置奖金组</em>
+                    <input type="text" value="请设置奖金组"  onClick="showBg(4);">
+                </li>
+            </ul>
+        </div>
+        
+    	<div class="button" style="width:90%; margin:0 auto; margin-top:20px;">
+        	<input type="button" value="确 认">
+    	</div>
+        
+    	<div id="fullbg"  class="box" style="height:100%;width:100%;margin:0;padding:0;display:none;">
+            <div id="dialog"  class="box-body">
+                <a href="#" class="gg"><p style="margin-right:20px;" onClick="closeBg();">取消</p></a>
+                <div class="yuming">
+                    <strong>请选择域名：</strong>
+                    <select>
+                        <option>http//HG.23355ol.com</option>
+                        <option>http//kk\.23355ol.com</option>
+                        <option>http//HG.544444.com</option>
+                        <option>http//HG.8888888.com</option>
+                    </select>
+                </div>
+                <div class="in_button" style="text-align:center; padding-bottom:20px;">
+                   <input type="button" value="确 认" style="background:#0c6; border:none;" >
+                </div> 
+            </div>
+     	</div>    
+    
+    	<div id="fullbg2"  class="box" style="height:100%;width:100%;margin:0;padding:0;display:none;">
+            <div id="dialog2"  class="box-body">
+                <a href="#" class="gg"><p style="margin-right:20px;" onClick="closeBg();">取消</p></a>
+                <div class="yuming">
+                    <strong>请用户类型：</strong>
+                    <select>
+                        <option>代理</option>
+                        <option>会员</option>
+                       
+                    </select>
+                </div>
+                <div class="in_button" style="text-align:center; padding-bottom:20px;">
+                   <input type="button" value="确 认" style="background:#0c6; border:none;" >
+                </div> 
+            </div>
+     	</div>
+        
+        <div id="fullbg3"  class="box" style="height:100%;width:100%;margin:0;padding:0;display:none;">
+            <div id="dialog3"  class="box-body">
+                <a href="#" class="gg"><p style="margin-right:20px;" onClick="closeBg();">取消</p></a>
+                <div class="yuming">
+                    <strong>请选择有效日期：</strong>
+                    <select>
+                        <option>一天</option>
+                        <option>两天</option>
+                       	<option>三天</option>
+                        <option>永久</option>
+                    </select>
+                </div>
+                <div class="in_button" style="text-align:center; padding-bottom:20px;">
+                   <input type="button" value="确 认" style="background:#0c6; border:none;" >
+                </div> 
+            </div>
+     	</div>
+    
+    	<div id="fullbg4"  class="box" style="height:100%;width:100%;margin:0;padding:0;display:none;">
+            <div id="dialog4"  class="box-body">
+                <a href="#" class="gg"><p style="margin-right:20px;" onClick="closeBg();">取消</p></a>
+                <div class="yuming">
+                    <strong>请奖金组：</strong>
+                    <select>
+                        	<option>--选择其他奖金组--</option>
+                            <option>9.2%--3000</option>
+                            <option>8.3%--2080</option>
+                            <option>8.2%--2020</option>
+                            <option>8.1%--1960</option>
+                            <option>8.0%--1920</option>
+                    </select>
+                </div>
+                <div class="in_button" style="text-align:center; padding-bottom:20px;">
+                   <input type="button" value="确 认" style="background:#0c6; border:none;" >
+                </div> 
+            </div>
+     	</div>
+    
+   	</div>
+
+<script type="text/javascript"> 
+
+//显示灰色 jQuery 遮罩层 
+function showBg(box_num) { 
+switch(box_num)
+{
+case 1:
+$("#fullbg").css({ display:"block" }); 
+$("#dialog").show(); 
+break;
+case 2:
+$("#fullbg2").css({ display:"block" }); 
+$("#dialog2").show(); 
+break;
+case 3:
+$("#fullbg3").css({ display:"block" }); 
+$("#dialog3").show(); 
+break;
+case 4:
+$("#fullbg4").css({ display:"block" }); 
+$("#dialog4").show(); 
+break;
+}
+} 
+//关闭灰色 jQuery 遮罩 
+function closeBg() { 
+$(".box-body").hide(); 
+$(".box").css("display","none"); 
+} 
+</script>
+
+
+  
+  	<div style="height:60px;"></div>
+  	<div class="bottom" style="z-index:9999999 !important;">
+    	<ul>
+        	<li onClick="location.href='index.html';">
+            	<i><img src="images/zijin.png"></i>
+            	彩票大厅
+            </li>
+            <li onClick="location.href='';">
+            	<i><img src="images/zhuanh.png"></i>
+            	优惠活动
+            </li>
+            <li onClick="location.href='AwardResults.html';">
+            	<i><img src="images/jiam.png"></i>
+            	开奖结果
+            </li>
+            <li onClick="location.href='CustomerService.html';">
+            	<i><img src="images/kef.png"></i>
+            	在线客服
+            </li>
+            <li onClick="location.href='MembershipCentre.html';">
+            	<i><img src="images/huiy1.png"></i>
+            	会员中心
+            </li>
+        </ul>
+    </div>
+  
+  
+</div>
+
+</form>	
+</body>
+</html>

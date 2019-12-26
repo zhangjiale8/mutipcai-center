@@ -1,0 +1,134 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<meta http-equiv="Content-Type" content="textml; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+<style>
+	#menu #nav{  overflow-x:inherit;}
+	#menu #nav li{width:50%;}
+	.tag{background:#fff;}
+</style>
+
+</head>
+<body>
+<form>
+<div class="wrapper">
+ 		
+    <div class="head" style="z-index:9999999 !important;">
+    	<a href="ReManagement.html" class="pgv"></a>
+        <div>设置奖金组</div>
+        <a class="yup" href="register.html"></a>
+    </div>
+    
+   <div class="whole">
+   	
+        <div id="menu">
+           	<ul id="nav">
+                    <li onclick="selectLi(this)"><a href="#" class="" style="color: #f53e34; border-bottom: solid 2px #f53e34;">配额奖金组</a></li>
+                    <li onclick="selectLi(this)"><a href="#" class="">其他奖金组</a></li>
+                </ul>
+                
+            <div id="menu_con">
+            	
+                <div class="tag" style="display: block;">
+                	<div class="ztai">
+                        <ul>
+                            <li>当前奖金</li>
+                            <li>返点率</li>
+                            <li>剩余配额</li>
+                            <li>操作</li>
+                        </ul>
+                     </div>   
+           	  		<div class="bitt">
+                    	<dl>
+                        	<a class="bank_f">
+                            <dt>
+                            	<span>0</span>
+                                <span class="kj">0.85%</span>
+                                <span class="kj">0</span>
+                                <span class="AdTo"><img src="images/xx5.png"></span>
+                            </dt>
+                            <dd style="border-bottom:solid 1px #efefef;">
+                            	<span>暂无....</span>
+                            </dd>
+                            </a>
+                        </dl>
+                    </div>
+                </div> 
+                
+                <div class="tag" style="display: none;">
+                	<div class="wx">温馨提示：奖金组一旦上调则无法降低，请谨慎操作。</div>
+                     <div class="jajsz">
+                     	<label>奖金设置：</label>
+                        <select>
+                        	<option>--选择其他奖金组--</option>
+                            <option>9.2%--3000</option>
+                            <option>8.3%--2080</option>
+                            <option>8.2%--2020</option>
+                            <option>8.1%--1960</option>
+                            <option>8.0%--1920</option>
+                        </select>
+                     </div>
+                </div>
+       
+            </div>
+       	</div>     
+            
+            
+<script type="text/javascript">
+
+function selectLi(obj){
+  var idx = $(obj).index();
+  $(".tag").each(function(k,v){
+    if(k===idx){
+	  $(this).removeAttr("style");
+	  $(this).attr("style","display:block");
+	  
+	  $(this).siblings().removeAttr("style");
+	  $(this).siblings().attr("style","display:none");
+	}
+  });
+}
+
+</script>     
+   	
+  </div>
+  
+  	<div style="height:60px;"></div>
+  	<div class="bottom" style="z-index:9999999 !important;">
+    	<ul>
+        	<li onClick="location.href='index.html';">
+            	<i><img src="images/zijin.png"></i>
+            	彩票大厅
+            </li>
+            <li onClick="location.href='';">
+            	<i><img src="images/zhuanh.png"></i>
+            	优惠活动
+            </li>
+            <li onClick="location.href='AwardResults.html';">
+            	<i><img src="images/jiam.png"></i>
+            	开奖结果
+            </li>
+            <li onClick="location.href='CustomerService.html';">
+            	<i><img src="images/kef.png"></i>
+            	在线客服
+            </li>
+            <li onClick="location.href='MembershipCentre.html';">
+            	<i><img src="images/huiy1.png"></i>
+            	会员中心
+            </li>
+        </ul>
+    </div>
+  
+  
+</div>
+
+</form>	
+</body>
+</html>
