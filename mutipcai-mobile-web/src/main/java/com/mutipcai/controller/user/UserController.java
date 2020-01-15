@@ -20,8 +20,8 @@ import com.mutipcai.vo.user.UserInfoVo;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-	@Autowired
-	UserService userservice;
+	/*@Autowired
+	UserService userservice;*/
 	
 	@RequestMapping("/index")
 	public String index(HttpServletRequest request, HttpServletResponse response) {
@@ -44,7 +44,7 @@ public class UserController {
 			String msg = "操作失败";
 			JSONObject data = new JSONObject();
 			
-			boolean flag = userservice.get
+			//boolean flag = userservice.get
 			
 		} catch (Exception e) {
 			e.printStackTrace();
