@@ -6,7 +6,8 @@
   <version>1.0</version>
   <packaging>pom</packaging>
   <modules>
-    <module>mutipcai-web</module>
+    <module>mutipcai-phone-web</module>
+    <module>mutipcai-admin-web</module>
   </modules>
   <properties>
 		<!-- spring版本号 -->
