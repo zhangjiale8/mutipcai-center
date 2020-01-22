@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mutipcai.mapper.user.UserMapper">
+	<!-- 用户信息记录数 -->
+	<select id="countuser" resultType="int">
+		 SELECT COUNT(1) FROM OAUSERMST A WHERE A.PHONE_VAL = #{PHONE}
+		
+	</select>
+	<!-- 用户注册 -->
+	<insert id="createuser" parameterType="com.mutipcai.vo.user.UserInfoVo" useGeneratedKeys="true" keyProperty="userno" keyColumn="userno">
+	  INSERT INTO OAUSERMST(USER_ID, PASSWORD_VAL,PHONE_VAL,CREATE_DTM) VALUES(#{userid}, #{password},#{phoneval}, #{phoneval})
+	</insert>
+
+</mapper>

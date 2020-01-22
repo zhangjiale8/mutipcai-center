@@ -1,6 +1,7 @@
 package com.mutipcai.vo.user;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class UserInfoVo implements Serializable,Cloneable {
 
@@ -8,11 +9,11 @@ public class UserInfoVo implements Serializable,Cloneable {
 	 * 用户信息
 	 */
 	private static final long serialVersionUID = -2870175962681334251L;
-	private long userno;
+	private Long userno;
 	private String userid;
 	private String usernam;
 	private String password;
-	private String createdtm;
+	private Date createdtm;
 	private String phoneval;
 	private String mailval;
 	
@@ -21,7 +22,7 @@ public class UserInfoVo implements Serializable,Cloneable {
 		super();
 	}
 	
-	public UserInfoVo(long userno, String userid, String usernam, String password, String createdtm, String phoneval,
+	public UserInfoVo(Long userno, String userid, String usernam, String password, Date createdtm, String phoneval,
 			String mailval) {
 		super();
 		this.userno = userno;
@@ -34,17 +35,17 @@ public class UserInfoVo implements Serializable,Cloneable {
 	}
 	
 	
-	public UserInfoVo(long userno, String userid, String usernam) {
+	public UserInfoVo(Long userno, String userid, String usernam) {
 		super();
 		this.userno = userno;
 		this.userid = userid;
 		this.usernam = usernam;
 	}
 
-	public long getUserno() {
+	public Long getUserno() {
 		return userno;
 	}
-	public void setUserno(long userno) {
+	public void setUserno(Long userno) {
 		this.userno = userno;
 	}
 	public String getUserid() {
@@ -65,10 +66,10 @@ public class UserInfoVo implements Serializable,Cloneable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getCreatedtm() {
+	public Date getCreatedtm() {
 		return createdtm;
 	}
-	public void setCreatedtm(String createdtm) {
+	public void setCreatedtm(Date createdtm) {
 		this.createdtm = createdtm;
 	}
 	public String getPhoneval() {
